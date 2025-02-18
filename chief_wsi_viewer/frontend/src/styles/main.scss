@@ -1,0 +1,154 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+// 基础样式
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+               'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// OpenSeadragon样式覆盖
+.openseadragon-container {
+  background-color: #f5f7fa !important;
+  
+  .navigator {
+    background-color: #fff !important;
+    border: 1px solid #dcdfe6 !important;
+    border-radius: 4px;
+  }
+}
+
+// Element Plus样式自定义
+.el-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dcdfe6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.el-aside {
+  border-right: 1px solid #dcdfe6;
+  background-color: #fff;
+}
+
+.el-main {
+  background-color: #f5f7fa;
+}
+
+// 滚动条样式
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fa;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dcdfe6;
+  border-radius: 3px;
+  
+  &:hover {
+    background: #c0c4cc;
+  }
+}
+
+// 工具提示
+.el-tooltip__popper {
+  max-width: 200px;
+}
+
+// 动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// 工具类
+.fade-enter-active {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.slide-enter-active {
+  animation: slideIn 0.3s ease-out;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
