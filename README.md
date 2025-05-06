@@ -1,6 +1,6 @@
-# CHIEF WSI Viewer
+# WSI Viewer
 
-CHIEF WSI Viewer是一个用于查看WSI（Whole Slide Image）文件的Python模块。它提供了一个完整的Web界面，支持浏览、查看和测量WSI图像。
+WSI Viewer是一个用于查看WSI（Whole Slide Image）文件的Python模块。它提供了一个完整的Web界面，支持浏览、查看和测量WSI图像。
 
 ## 功能特点
 
@@ -14,8 +14,8 @@ CHIEF WSI Viewer是一个用于查看WSI（Whole Slide Image）文件的Python�
 ## 项目结构
 
 ```
-chief_wsi_viewer/
-├── chief_wsi_viewer/
+wsi_viewer/
+├── wsi_viewer/
 │   ├── __init__.py              # 包初始化文件
 │   ├── viewer.py                # WSIViewer核心类
 │   ├── cli.py                   # 命令行接口
@@ -64,7 +64,7 @@ pip install -e .
 ### 作为Python模块使用
 
 ```python
-from chief_wsi_viewer import WSIViewer
+from wsi_viewer import WSIViewer
 
 # 创建查看器实例
 viewer = WSIViewer(
@@ -91,7 +91,7 @@ viewer.stop()
 chief-wsi-viewer
 
 # 自定义配置启动
-chief-wsi-viewer --host 0.0.0.0 --backend-port 5000 --frontend-port 3000 --static-dir /path/to/dir --log-level info
+wsi-viewer --host 0.0.0.0 --backend-port 5000 --frontend-port 3000 --static-dir /path/to/dir --log-level info
 ```
 
 可用的命令行参数：
@@ -130,7 +130,7 @@ chief-wsi-viewer --host 0.0.0.0 --backend-port 5000 --frontend-port 3000 --stati
 pip install -e ".[dev]"
 
 # 前端开发依赖
-cd chief_wsi_viewer/frontend
+cd wsi_viewer/frontend
 npm install
 ```
 
@@ -138,17 +138,17 @@ npm install
 
 ```bash
 # 运行后端服务
-python -m chief_wsi_viewer.cli --log-level debug
+python -m wsi_viewer.cli --log-level debug
 
 # 运行前端开发服务器（新终端）
-cd chief_wsi_viewer/frontend
+cd wsi_viewer/frontend
 npm run dev
 ```
 
 ### 构建前端
 
 ```bash
-cd chief_wsi_viewer/frontend
+cd wsi_viewer/frontend
 npm run build
 ```
 
