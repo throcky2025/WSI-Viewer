@@ -50,7 +50,7 @@ setup_logging()
 logger = logging.getLogger(__name__)
 
 # 创建FastAPI应用
-app = FastAPI(title="CHIEF WSI Viewer API")
+app = FastAPI(title="WSI Viewer API")
 
 # 配置CORS
 app.add_middleware(
@@ -117,7 +117,7 @@ async def websocket_endpoint(websocket: WebSocket):
 @app.get("/")
 async def root():
     """健康检查端点"""
-    return {"status": "ok", "message": "CHIEF WSI Viewer API is running"}
+    return {"status": "ok", "message": "WSI Viewer API is running"}
 
 def start_server(host="0.0.0.0", port=5000, log_level="info"):
     """启动服务器"""
