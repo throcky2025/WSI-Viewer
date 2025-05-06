@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="chief_wsi_viewer",
+    name="wsi_viewer",
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
@@ -19,19 +19,19 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'chief-wsi-viewer=chief_wsi_viewer.cli:main',
+            'wsi-viewer=wsi_viewer.cli:main',
         ],
     },
     include_package_data=True,
     package_data={
-        'chief_wsi_viewer': [
+        'wsi_viewer': [
             'api/**/*',
             'frontend/**/*',
             'static/**/*'
         ],
     },
     python_requires=">=3.7",
-    author="CHIEF Team",
+    author="DSGM Team",
     description="A WSI (Whole Slide Image) viewer module",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
