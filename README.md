@@ -53,7 +53,7 @@ wsi_viewer/
 ```bash
 # 克隆仓库
 git clone <repository-url>
-cd chief_wsi_viewer
+cd wsi_viewer
 
 # 安装开发版本
 pip install -e .
@@ -84,11 +84,11 @@ viewer.stop()
 
 ### 通过命令行使用
 
-安装后，你可以使用`chief-wsi-viewer`命令来启动查看器：
+安装后，你可以使用`wsi-viewer`命令来启动查看器：
 
 ```bash
 # 使用默认配置启动
-chief-wsi-viewer
+wsi-viewer
 
 # 自定义配置启动
 wsi-viewer --host 0.0.0.0 --backend-port 5000 --frontend-port 3000 --static-dir /path/to/dir --log-level info
